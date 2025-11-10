@@ -6,17 +6,40 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E56F8E942EC21F5C0095E0FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56F8E8B2EC21F5C0095E0FA /* Assets.xcassets */; };
+		E56F8E952EC21F5C0095E0FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8E8A2EC21F5C0095E0FA /* AppDelegate.swift */; };
+		E56F8E962EC21F5C0095E0FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8E8C2EC21F5C0095E0FA /* HomeView.swift */; };
+		E56F8E972EC21F5C0095E0FA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8E8D2EC21F5C0095E0FA /* MainTabView.swift */; };
+		E56F8E982EC21F5C0095E0FA /* MusicSalePlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8E8E2EC21F5C0095E0FA /* MusicSalePlatformApp.swift */; };
+		E56F8E992EC21F5C0095E0FA /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8E8F2EC21F5C0095E0FA /* NavigationView.swift */; };
+		E56F8E9A2EC21F5C0095E0FA /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8E902EC21F5C0095E0FA /* Route.swift */; };
+		E56F8E9B2EC21F5C0095E0FA /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8E912EC21F5C0095E0FA /* Tab.swift */; };
+		E56F8E9C2EC21F5C0095E0FA /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8E922EC21F5C0095E0FA /* TabView.swift */; };
+		E56F8EA02EC221290095E0FA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56F8E9F2EC221290095E0FA /* Colors.xcassets */; };
+		E56F8EA22EC2213B0095E0FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56F8EA12EC2213B0095E0FA /* Images.xcassets */; };
+		E56F8EA42EC224C00095E0FA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8EA32EC224C00095E0FA /* SearchView.swift */; };
+		E56F8EA62EC229520095E0FA /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8EA52EC229520095E0FA /* CategoryView.swift */; };
+		E56F8EA82EC229900095E0FA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8EA72EC229900095E0FA /* Category.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		E56F8E8A2EC21F5C0095E0FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E56F8E8B2EC21F5C0095E0FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E56F8E8C2EC21F5C0095E0FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E56F8E8D2EC21F5C0095E0FA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E56F8E8E2EC21F5C0095E0FA /* MusicSalePlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSalePlatformApp.swift; sourceTree = "<group>"; };
+		E56F8E8F2EC21F5C0095E0FA /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		E56F8E902EC21F5C0095E0FA /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		E56F8E912EC21F5C0095E0FA /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		E56F8E922EC21F5C0095E0FA /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		E56F8E9F2EC221290095E0FA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E56F8EA12EC2213B0095E0FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E56F8EA32EC224C00095E0FA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E56F8EA52EC229520095E0FA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		E56F8EA72EC229900095E0FA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E56F99D82EAE7681003EECDB /* MusicSalePlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicSalePlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		E56F99DA2EAE7681003EECDB /* MusicSalePlatform */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MusicSalePlatform;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E56F99D52EAE7681003EECDB /* Frameworks */ = {
@@ -29,10 +52,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E56F8E932EC21F5C0095E0FA /* MusicSalePlatform */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8E9E2EC220410095E0FA /* Resources */,
+				E56F8E9D2EC21F630095E0FA /* App */,
+				E56F8EAE2EC22CE20095E0FA /* Presentation */,
+				E56F8EA92EC22C700095E0FA /* Components */,
+			);
+			path = MusicSalePlatform;
+			sourceTree = "<group>";
+		};
+		E56F8E9D2EC21F630095E0FA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8E8A2EC21F5C0095E0FA /* AppDelegate.swift */,
+				E56F8E8E2EC21F5C0095E0FA /* MusicSalePlatformApp.swift */,
+				E56F8E902EC21F5C0095E0FA /* Route.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E56F8E9E2EC220410095E0FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8E8B2EC21F5C0095E0FA /* Assets.xcassets */,
+				E56F8E9F2EC221290095E0FA /* Colors.xcassets */,
+				E56F8EA12EC2213B0095E0FA /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E56F8EA92EC22C700095E0FA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8EAD2EC22CD10095E0FA /* Navigation */,
+				E56F8EAC2EC22CC20095E0FA /* Search */,
+				E56F8EAB2EC22CB70095E0FA /* Category */,
+				E56F8EAA2EC22CAD0095E0FA /* Tab */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E56F8EAA2EC22CAD0095E0FA /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8E912EC21F5C0095E0FA /* Tab.swift */,
+				E56F8E922EC21F5C0095E0FA /* TabView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		E56F8EAB2EC22CB70095E0FA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8EA72EC229900095E0FA /* Category.swift */,
+				E56F8EA52EC229520095E0FA /* CategoryView.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E56F8EAC2EC22CC20095E0FA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8EA32EC224C00095E0FA /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E56F8EAD2EC22CD10095E0FA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8E8F2EC21F5C0095E0FA /* NavigationView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		E56F8EAE2EC22CE20095E0FA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8EAF2EC22D210095E0FA /* Home */,
+				E56F8E8D2EC21F5C0095E0FA /* MainTabView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E56F8EAF2EC22D210095E0FA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E56F8E8C2EC21F5C0095E0FA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		E56F99CF2EAE7681003EECDB = {
 			isa = PBXGroup;
 			children = (
-				E56F99DA2EAE7681003EECDB /* MusicSalePlatform */,
+				E56F8E932EC21F5C0095E0FA /* MusicSalePlatform */,
 				E56F99D92EAE7681003EECDB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +175,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				E56F99DA2EAE7681003EECDB /* MusicSalePlatform */,
 			);
 			name = MusicSalePlatform;
 			packageProductDependencies = (
@@ -109,6 +222,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56F8EA22EC2213B0095E0FA /* Images.xcassets in Resources */,
+				E56F8E942EC21F5C0095E0FA /* Assets.xcassets in Resources */,
+				E56F8EA02EC221290095E0FA /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +235,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56F8E952EC21F5C0095E0FA /* AppDelegate.swift in Sources */,
+				E56F8EA42EC224C00095E0FA /* SearchView.swift in Sources */,
+				E56F8E962EC21F5C0095E0FA /* HomeView.swift in Sources */,
+				E56F8E972EC21F5C0095E0FA /* MainTabView.swift in Sources */,
+				E56F8EA62EC229520095E0FA /* CategoryView.swift in Sources */,
+				E56F8E982EC21F5C0095E0FA /* MusicSalePlatformApp.swift in Sources */,
+				E56F8E992EC21F5C0095E0FA /* NavigationView.swift in Sources */,
+				E56F8E9A2EC21F5C0095E0FA /* Route.swift in Sources */,
+				E56F8E9B2EC21F5C0095E0FA /* Tab.swift in Sources */,
+				E56F8E9C2EC21F5C0095E0FA /* TabView.swift in Sources */,
+				E56F8EA82EC229900095E0FA /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

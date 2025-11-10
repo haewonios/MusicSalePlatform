@@ -21,6 +21,8 @@
 		E56F8EA42EC224C00095E0FA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8EA32EC224C00095E0FA /* SearchView.swift */; };
 		E56F8EA62EC229520095E0FA /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8EA52EC229520095E0FA /* CategoryView.swift */; };
 		E56F8EA82EC229900095E0FA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8EA72EC229900095E0FA /* Category.swift */; };
+		E56F8EB22EC231620095E0FA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E56F8EB12EC231620095E0FA /* ComposableArchitecture */; };
+		E56F8EB42EC231E00095E0FA /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F8EB32EC231E00095E0FA /* HomeFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,7 @@
 		E56F8EA32EC224C00095E0FA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		E56F8EA52EC229520095E0FA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		E56F8EA72EC229900095E0FA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E56F8EB32EC231E00095E0FA /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
 		E56F99D82EAE7681003EECDB /* MusicSalePlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicSalePlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56F8EB22EC231620095E0FA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				E56F8E8C2EC21F5C0095E0FA /* HomeView.swift */,
+				E56F8EB32EC231E00095E0FA /* HomeFeature.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			);
 			name = MusicSalePlatform;
 			packageProductDependencies = (
+				E56F8EB12EC231620095E0FA /* ComposableArchitecture */,
 			);
 			productName = MusicSalePlatform;
 			productReference = E56F99D82EAE7681003EECDB /* MusicSalePlatform.app */;
@@ -207,6 +213,9 @@
 			);
 			mainGroup = E56F99CF2EAE7681003EECDB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E56F8EB02EC231610095E0FA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E56F99D92EAE7681003EECDB /* Products */;
 			projectDirPath = "";
@@ -244,6 +253,7 @@
 				E56F8E992EC21F5C0095E0FA /* NavigationView.swift in Sources */,
 				E56F8E9A2EC21F5C0095E0FA /* Route.swift in Sources */,
 				E56F8E9B2EC21F5C0095E0FA /* Tab.swift in Sources */,
+				E56F8EB42EC231E00095E0FA /* HomeFeature.swift in Sources */,
 				E56F8E9C2EC21F5C0095E0FA /* TabView.swift in Sources */,
 				E56F8EA82EC229900095E0FA /* Category.swift in Sources */,
 			);
@@ -465,6 +475,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E56F8EB02EC231610095E0FA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.23.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E56F8EB12EC231620095E0FA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E56F8EB02EC231610095E0FA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E56F99D02EAE7681003EECDB /* Project object */;
 }

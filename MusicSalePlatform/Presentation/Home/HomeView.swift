@@ -19,7 +19,7 @@ struct HomeView: View {
             }
             SearchView(text: $searchText)
             CategoryView()
-            
+            Spacer()
         }
         .padding(.horizontal, 20)
     }

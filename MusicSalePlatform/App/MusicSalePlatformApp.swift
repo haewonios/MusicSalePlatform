@@ -14,6 +14,9 @@ struct MusicSalePlatformApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .onAppear {
+                    print("🟢 MainTabView onAppear")
+                }
         }
     }
 }

@@ -1,0 +1,11 @@
+//
+//  Common.xcconfig
+//  MusicSalePlatform
+//
+//  Created by hyewon on 12/8/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+BUNDLE_ID = "com.haewon.MusicSalePlatform"

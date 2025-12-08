@@ -1,12 +1,6 @@
-//
-//  Tuist.swift
-//  MusicSalePlatformManifests
-//
-//  Created by hyewon on 12/8/25.
-//
+@preconcurrency
+import ProjectDescription
 
-//import ProjectDescription
-//
-//let tuist = Tuist(
-//    project: .tuist(generationOptions: .options(enforceExplicitDependencies: true))
-//)
+let config = Config(
+    generationOptions: .options(enforceExplicitDependencies: true)
+)

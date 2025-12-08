@@ -8,6 +8,13 @@ let infoPlist: [String: Plist.Value] = [:]
 @MainActor
 let project = Project(
     name: "MusicSalePlatform",
+    settings: .settings(
+        base: [:],
+        configurations: [
+            .debug(name: "Debug", xcconfig: "Configurations/Common.xcconfig"),
+            .release(name: "Release", xcconfig: "Configurations/Common.xcconfig")
+        ]
+    ),
     targets: [
         .target(
             name: "MusicSalePlatform",
@@ -16,10 +23,10 @@ let project = Project(
             bundleId: bundleId,
             deploymentTargets: .iOS("16.0"),
             infoPlist: .extendingDefault(with: infoPlist),
-            sources: ["MusicSalePlatform/Sources/**"],
-            resources: ["MusicSalePlatform/Resources/**"],
+            sources: ["Sources/**"],
+            resources: ["Resources/**"],
             dependencies: [
-                
+//                .external(name: "ComposableArchitecture")
             ]
         )
     ]

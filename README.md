@@ -36,3 +36,11 @@ mise install tuist@3          # Install a fuzzy version number
 tuist version
 ```
 
+### 프로젝트 실행
+
+```bash
+tuist edit # tuist 설정 수정 필요할 때 
+tuist install # remote 라이브러리 설치 (최초 실행 및 수정 이후 사용)
+tuist generate # Xcode 프로젝트 실행 (✅)
+```
+

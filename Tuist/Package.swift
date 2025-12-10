@@ -15,6 +15,7 @@ import PackageDescription
 
 let package = Package(
     name: "MusicSalePlatform",
+    platforms: [.iOS(.v16)],
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.20.0")
     ]

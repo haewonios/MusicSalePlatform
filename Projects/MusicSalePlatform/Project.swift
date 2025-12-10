@@ -3,11 +3,18 @@
 import ProjectDescription
 
 let bundleId = "$(BUNDLE_ID)"
-let infoPlist: [String: Plist.Value] = [:]
+let infoPlist: [String: Plist.Value] = [
+    "UILaunchScreen": [
+        "UIImageName": "logo"
+    ]
+]
 
 @MainActor
 let project = Project(
     name: "MusicSalePlatform",
+    packages: [
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.20.0")
+    ],
     settings: .settings(
         base: [:],
         configurations: [
@@ -26,7 +33,7 @@ let project = Project(
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [
-//                .external(name: "ComposableArchitecture")
+                .package(product: "ComposableArchitecture")
             ]
         )
     ]

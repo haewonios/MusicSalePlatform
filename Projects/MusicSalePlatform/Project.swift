@@ -4,9 +4,7 @@ import ProjectDescription
 
 let bundleId = "$(BUNDLE_ID)"
 let infoPlist: [String: Plist.Value] = [
-    "UILaunchScreen": [
-        "UIImageName": "logo"
-    ]
+    "UILaunchStoryboardName": "Launch Screen"
 ]
 
 @MainActor

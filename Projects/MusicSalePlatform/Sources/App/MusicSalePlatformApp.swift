@@ -13,10 +13,11 @@ struct MusicSalePlatformApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainTabView()
-                .onAppear {
-                    print("🟢 MainTabView onAppear")
-                }
+            LoginView()
+//            MainTabView()
+//                .onAppear {
+//                    print("🟢 MainTabView onAppear")
+//                }
         }
     }
 }

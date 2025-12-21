@@ -8,7 +8,9 @@
 import ComposableArchitecture
 
 private enum KakaoLoginUseCaseKey: DependencyKey {
-    static let liveValue: KakaoLoginUseCaseProtocol = KakaoLoginUseCase()
+    static let liveValue: KakaoLoginUseCaseProtocol = KakaoLoginUseCase(
+        repository: KakaoLoginRepository()
+    )
 }
 
 extension DependencyValues {

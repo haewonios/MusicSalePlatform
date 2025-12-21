@@ -12,11 +12,15 @@ import KakaoSDKUser
 struct LoginFeature {
     @ObservableState
     struct State: Equatable {
-        init() {}
+        var accessToken: String?
+        var alert: AlertState<Action>?
+//        init() {}
     }
     
-    enum Action {
+    enum Action: Equatable {
         case kakaoLoginTapped
+        case showAlert(_ message: String)
+        
     }
     
     @Dependency(\.kakaoLoginUseCase) var kakaoLoginUseCase
@@ -28,23 +32,20 @@ struct LoginFeature {
             switch action {
             case .kakaoLoginTapped:
                 AppLogger.debug("kakaoLoginTapped")
-                kakaoLoginUseCase.execute()
-                
-                // 기본 설정으로 통합 로그인 UI 호출
-                UserApi.shared.loginWithKakao(BridgeConfiguration(), loginProperties: LoginConfiguration()) { token, error in
-                    if let error = error {
-                        print(error)
-                        // 에러 처리
-                        return
+
+                return .run { send in
+                    do {
+                        // FIXME: - Main Thread 오류 발생 (SdK 호출 내부에서)
+                        let accessToken = try await kakaoLoginUseCase.execute().async()
+                        AppLogger.debug(accessToken ?? "accessToken is nil")
+                    } catch {
+                        AppLogger.debug(error.localizedDescription)
+                        await send(.showAlert(error.localizedDescription))
                     }
-                    
-                    AppLogger.debug("loginWithKakao() success.")
-                    // 성공 시 동작 구현
-                    let accessToken = token?.accessToken
-                    
-                    AppLogger.debug("accessToken: \(accessToken ?? "nil")")
                 }
                 
+            case .showAlert(let message):
+                AppLogger.debug(message)
                 
                 return .none
             }

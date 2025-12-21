@@ -16,6 +16,7 @@ public struct LoginView: View {
             Button {
                 store.send(.kakaoLoginTapped)
             } label: {
+                // TODO: - 버튼 이미지 수정 필요
                 MusicSalePlatformAsset.Images.kakaoLogin.swiftUIImage
             }
             .padding(.horizontal, 10)

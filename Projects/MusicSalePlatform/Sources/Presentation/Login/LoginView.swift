@@ -6,15 +6,29 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 public struct LoginView: View {
+    let store: StoreOf<LoginFeature>
+    
     public var body: some View {
         VStack {
             Button {
-                print("login button tapped")
+                store.send(.kakaoLoginTapped)
             } label: {
-                Text("로그인 버튼")
+                MusicSalePlatformAsset.Images.kakaoLogin.swiftUIImage
             }
+            .padding(.horizontal, 10)
         }
     }
+}
+
+#Preview {
+    LoginView(
+        store: Store(
+            initialState: LoginFeature.State()
+        ) {
+            LoginFeature()
+        }
+    )
 }

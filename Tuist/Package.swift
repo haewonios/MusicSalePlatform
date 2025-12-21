@@ -17,6 +17,7 @@ let package = Package(
     name: "MusicSalePlatform",
     platforms: [.iOS(.v16)],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.20.0")
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.20.0"),
+        .package(url: "https://github.com/kakao/kakao-ios-sdk", from: "2.25.0"),
     ]
 )

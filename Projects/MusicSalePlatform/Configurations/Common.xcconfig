@@ -9,3 +9,6 @@
 // https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
 
 BUNDLE_ID = com.haewon.MusicSalePlatform
+
+// API Key
+KAKAO_APP_KEY = f5524d198c6d8525fc1f9a25df04f6b1

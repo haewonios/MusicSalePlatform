@@ -4,14 +4,21 @@ import ProjectDescription
 
 let bundleId = "$(BUNDLE_ID)"
 let infoPlist: [String: Plist.Value] = [
-    "UILaunchStoryboardName": "Launch Screen"
+    "UILaunchStoryboardName": "Launch Screen",
+    "LSApplicationQueriesSchemes": ["kakaokompassauth"], // 카카오톡으로 로그인]
+    "KAKAO_APP_KEY": "$(KAKAO_APP_KEY)",
+    "CFBundleURLTypes": [
+        "CFBundleTypeRole": "Editor",
+        "CFBundleURLSchemes": ["kakao$(KAKAO_APP_KEY)"]
+    ],
 ]
 
 @MainActor
 let project = Project(
     name: "MusicSalePlatform",
     packages: [
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.20.0")
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.20.0"),
+        .package(url: "https://github.com/kakao/kakao-ios-sdk", from: "2.25.0"),
     ],
     settings: .settings(
         base: [:],
@@ -31,7 +38,8 @@ let project = Project(
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [
-                .package(product: "ComposableArchitecture")
+                .package(product: "ComposableArchitecture"),
+                .package(product: "KakaoSDK")
             ]
         )
     ]

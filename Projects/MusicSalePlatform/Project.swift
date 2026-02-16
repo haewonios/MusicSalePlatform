@@ -11,6 +11,21 @@ let infoPlist: [String: Plist.Value] = [
         "CFBundleTypeRole": "Editor",
         "CFBundleURLSchemes": ["kakao$(KAKAO_APP_KEY)"]
     ],
+    "UIApplicationSceneManifest": [
+        "UIApplicationSupportsMultipleScenes": false,
+        "UISceneConfigurations": [
+            "UIWindowSceneSessionRoleApplication": [
+                [
+                    "UISceneConfigurationName": "Default Configuration",
+                    "UISceneDelegateClassName": "$(PRODUCT_MODULE_NAME).SceneDelegate"
+                ]
+            ]
+        ]
+    ],
+    "NSAppTransportSecurity": [
+        "NSAllowsLocalNetworking": true,
+        "NSAllowsArbitraryLoads": true
+    ],
 ]
 
 @MainActor

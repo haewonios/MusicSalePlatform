@@ -8,10 +8,10 @@
 import SwiftUI
 import ComposableArchitecture
 
-public struct LoginView: View {
+struct LoginView: View {
     let store: StoreOf<LoginFeature>
     
-    public var body: some View {
+    var body: some View {
         VStack {
             Button {
                 store.send(.kakaoLoginTapped)

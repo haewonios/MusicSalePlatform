@@ -8,7 +8,14 @@
 import KakaoSDKUser
 import Combine
 
-class KakaoLoginRepository: KakaoLoginRepositoryProtocol {
+final class KakaoLoginRepository: KakaoLoginRepositoryProtocol {
+    
+    private let apiService: BaseApiServiceProtocol
+    
+    public init(apiService: BaseApiServiceProtocol) {
+        self.apiService = apiService
+    }
+    
     /// 카카오 로그인
     func kakaoLogin() -> AnyPublisher<OAuthToken, KakaoLoginError> {
         UserApi.isKakaoTalkLoginAvailable() ? kakaoLoginWithApp() : kakaoLoginWithAccount()
@@ -60,5 +67,12 @@ class KakaoLoginRepository: KakaoLoginRepositoryProtocol {
             }
         }
         .eraseToAnyPublisher()
+    }
+    
+    func requestKakaoOauthLogin(accessToken: String) -> AnyPublisher<UserAuth, KakaoLoginError> {
+        apiService.request(UserAPI.loginWithKakao(accessToken: accessToken))
+            .map { (dto: UserResponseDTO) in dto.toUserAuthEntity() }
+            .mapError { _ in .invalidToken }
+            .eraseToAnyPublisher()
     }
 }

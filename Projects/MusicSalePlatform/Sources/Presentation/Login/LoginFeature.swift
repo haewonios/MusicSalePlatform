@@ -20,7 +20,11 @@ struct LoginFeature {
     enum Action: Equatable {
         case kakaoLoginTapped
         case showAlert(_ message: String)
+        case delegate(DelegateAction)
         
+        enum DelegateAction: Equatable {
+            case loginSuccess
+        }
     }
     
     @Dependency(\.kakaoLoginUseCase) var kakaoLoginUseCase
@@ -36,8 +40,10 @@ struct LoginFeature {
                 return .run { send in
                     do {
                         // FIXME: - Main Thread 오류 발생 (SdK 호출 내부에서)
-                        let accessToken = try await kakaoLoginUseCase.execute().async()
-                        AppLogger.debug(accessToken ?? "accessToken is nil")
+                        let _ = try await kakaoLoginUseCase.execute().async()
+                        AppLogger.debug()
+                        await send(.delegate(.loginSuccess))
+                        
                     } catch {
                         AppLogger.debug(error.localizedDescription)
                         await send(.showAlert(error.localizedDescription))
@@ -47,6 +53,9 @@ struct LoginFeature {
             case .showAlert(let message):
                 AppLogger.debug(message)
                 
+                return .none
+                
+            case .delegate:
                 return .none
             }
         }

@@ -19,5 +19,6 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.20.0"),
         .package(url: "https://github.com/kakao/kakao-ios-sdk", from: "2.25.0"),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.11.0"))
     ]
 )

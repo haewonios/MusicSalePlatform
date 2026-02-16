@@ -10,4 +10,5 @@ import Foundation
 enum KakaoLoginError: Error {
     case sdkError(message: String)
     case tokenFail
+    case invalidToken
 }

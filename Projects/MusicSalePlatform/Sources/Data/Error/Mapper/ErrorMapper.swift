@@ -1,19 +1,21 @@
 //
-//  DomainErrorMapper.swift
+//  ErrorMapper.swift
 //  MusicSalePlatform
 //
-//  Created by hyewon on 12/22/25.
+//  Created by hyewon on 2/17/26.
 //
 
 import Foundation
 
-struct DomainErrorMapper {
+struct ErrorMapper {
     static func toDomainError(_ error: KakaoLoginError) -> KakaoLoginDomainError {
         switch error {
         case .sdkError(let message):
             AppLogger.debug(message)
             return .loginFail
         case .tokenFail:
+            return .loginFail
+        case .invalidToken:
             return .loginFail
         }
     }

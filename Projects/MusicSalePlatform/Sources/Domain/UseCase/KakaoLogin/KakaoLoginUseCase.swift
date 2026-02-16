@@ -8,7 +8,7 @@
 import Combine
 
 protocol KakaoLoginUseCaseProtocol {
-    func execute() -> AnyPublisher<String?, KakaoLoginDomainError>
+    func execute() -> AnyPublisher<Void, KakaoLoginDomainError>
 }
 
 final class KakaoLoginUseCase: KakaoLoginUseCaseProtocol {
@@ -18,11 +18,15 @@ final class KakaoLoginUseCase: KakaoLoginUseCaseProtocol {
         self.repository = repository
     }
     
-    func execute() -> AnyPublisher<String?, KakaoLoginDomainError> {
+    func execute() -> AnyPublisher<Void, KakaoLoginDomainError> {
         return repository.kakaoLogin()
-            .map { $0.accessToken }
+            .flatMap { oAuthToken -> AnyPublisher<UserAuth, KakaoLoginError> in
+                return self.repository.requestKakaoOauthLogin(accessToken: oAuthToken.accessToken ?? "")
+            }
+            .map { _ in }
+//            .map { $0.accessToken }
             .mapError { error in
-                DomainErrorMapper.toDomainError(error)
+                ErrorMapper.toDomainError(error)
             }
             .eraseToAnyPublisher()
     }

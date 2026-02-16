@@ -13,18 +13,21 @@ struct MusicSalePlatformApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     private let store = Store(
-        initialState: LoginFeature.State()
+        initialState: AppRootFeature.State()
     ) {
-        LoginFeature()
+        AppRootFeature()
     }
     
     var body: some Scene {
         WindowGroup {
-            LoginView(store: store)
-//            MainTabView()
-//                .onAppear {
-//                    print("🟢 MainTabView onAppear")
-//                }
+            switch store.destination {
+            case .login:
+                if let loginStore = store.scope(state: \.destination.login, action: \.login) {
+                    LoginView(store: loginStore)
+                }
+            case .mainTab:
+                MainTabView()
+            }
         }
     }
 }

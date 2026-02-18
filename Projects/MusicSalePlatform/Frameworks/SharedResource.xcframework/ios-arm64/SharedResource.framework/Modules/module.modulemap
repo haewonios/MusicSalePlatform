@@ -1,0 +1,8 @@
+framework module SharedResource {
+    umbrella header "SharedResource.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

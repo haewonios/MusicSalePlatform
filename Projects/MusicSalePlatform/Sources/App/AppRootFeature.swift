@@ -13,7 +13,7 @@ struct AppRootFeature {
         }
         
         init() {
-            self.destination = .login(LoginFeature.State())
+            self.destination = .mainTab //.login(LoginFeature.State())
         }
     }
     

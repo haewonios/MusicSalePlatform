@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SharedResource
 
 struct MainTabView: View {
     
@@ -94,7 +95,17 @@ public struct CommunityView: View {
 
 public struct MapView: View {
     public var body: some View {
-        Text("MapView")
+        HStack {
+            Image(uiImage: SharedResource.images().users.toUIImage()!)
+            Image(uiImage: SharedResource.images().location.toUIImage()!)
+                .background(Color(SharedResource.colors().info.getUIColor()))
+            Image(uiImage: SharedResource.images().home.toUIImage()!)
+                .background(Color(SharedResource.colors().main_brand.getUIColor()))
+            Image(uiImage: SharedResource.images().chat.toUIImage()!)
+                .background(Color(SharedResource.colors().error.getUIColor()))
+            Image(uiImage: SharedResource.images().profile.toUIImage()!)
+        }
+        Text("MapView_resource check")
     }
 }
 

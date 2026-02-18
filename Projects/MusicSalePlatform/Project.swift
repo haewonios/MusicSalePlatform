@@ -54,7 +54,8 @@ let project = Project(
             resources: ["Resources/**"],
             dependencies: [
                 .package(product: "ComposableArchitecture"),
-                .package(product: "KakaoSDK")
+                .package(product: "KakaoSDK"),
+                .xcframework(path: "Frameworks/SharedResource.xcframework")
             ]
         )
     ]
